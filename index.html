@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura Gold</title>
+    <style>
+      :root {
+        --color-gold: #FFD700;
+        --color-gold-dark: #B8860B;
+        --color-brand-bg: #F5F7FA;
+        --color-brand-surface: #FFFFFF;
+        --color-brand-light: #E5E7EB;
+        --color-brand-text: #111827; /* Dark Grey / Black for Day Mode */
+        --color-brand-text-secondary: #4B5563;
+      }
+      :root.dark {
+        --color-brand-bg: #121212;
+        --color-brand-surface: #1E1E1E;
+        --color-brand-light: #2A2A2A;
+        --color-brand-text: #FFFFFF; /* White for Night Mode */
+        --color-brand-text-secondary: #A0A0A0;
+      }
+      body {
+        background-color: var(--color-brand-bg);
+        color: var(--color-brand-text);
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'gold': 'var(--color-gold)',
+              'gold-dark': 'var(--color-gold-dark)',
+              'brand-bg': 'var(--color-brand-bg)',
+              'brand-surface': 'var(--color-brand-surface)',
+              'brand-light': 'var(--color-brand-light)',
+              'brand-text': 'var(--color-brand-text)',
+              'brand-text-secondary': 'var(--color-brand-text-secondary)',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
